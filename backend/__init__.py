@@ -6,7 +6,7 @@ from uvicorn import run as run_uvicorn
 app = FastAPI(debug=True)
 
 
-import routes
+from . import routes
 
 
 def main() -> None:

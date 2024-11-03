@@ -1,6 +1,6 @@
-from main import app
-from schemas import TransactionData
-from db import SESSION, Transaction
+from .. import app
+from ..schemas import TransactionData
+from ..db import SESSION, Transaction
 
 
 
