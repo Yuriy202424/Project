@@ -10,8 +10,21 @@
     {% block styles %} 
         <style>
             body {
-                background-color: burlywood;
+                background-color: rgb(21, 21, 21);
             }
+            
+            .navbar{
+                --bs-navbar-active-color: rgb(182, 166, 166);
+                --bs-navbar-brand-color: rgb(182, 166, 166);
+                --bs-navbar-brand-hover-color: rgb(182, 166, 166);
+            }
+            
+            .bg-body-tertiary {
+                --bs-bg-opacity: 1;
+                background-color: rgb(0, 0, 0) !important;
+            }
+
+            
         </style>
     
     {% endblock %}
@@ -33,7 +46,7 @@
                     <a class="nav-link" href="/create">Add Task</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" style="color: #090909; opacity: 1;" href="#">👤 {{ nickname }}</a>
+                    <a class="nav-link disabled" style="color: #1f1f1f; opacity: 1;" href="#">👤 {{ nickname }}</a>
                 </li>                
                 </ul>
                 <form class="d-flex" role="search">

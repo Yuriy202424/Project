@@ -1,0 +1,32 @@
+{% extends '__base.html' %}
+
+{% block title %}
+    Transaction maker
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                color: #9f2626;
+            }
+    </style>
+{% endblock %}
+
+{% block content%}
+    <form action="/create" method="post">
+        <label for="amount">Amount</label><br>
+        <input type="number" id="amount" name="amount"><br><br>
+        <label for="description">Description</label><br>
+        <textarea id="description" name="description" rows="2" cols="20"></textarea><br><br>
+        <label for="category">Choose category</label>
+        <select id="category" name="category">
+          <option value="Sports">Sports</option>
+          <option value="Food">Food</option>
+          <option value="Games">Games</option>
+          <option value="Study">Study</option>
+        </select>
+        <input type="submit" value="Enter">
+    </form>
+{% endblock %}

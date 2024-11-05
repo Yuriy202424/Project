@@ -1,1 +1,1 @@
-from .transaction import TransactionData
+from .transaction import CreateTransaction

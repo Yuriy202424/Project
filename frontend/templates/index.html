@@ -13,7 +13,7 @@
         body {
             background-color: #2C2C2C;
             font-family: 'Roboto', sans-serif;
-            color: #0b0303;
+            color: #525252;
         }
 
         .task-container {
@@ -69,13 +69,13 @@
         }
 
         .card-title {
-            color: #1d1d1d;
+            color: #1e1e1e;
             font-size: 20px;
             font-weight: bold;
         }
 
         .card-text {
-            color: #0f0f0f;
+            color: #7f1515;
             font-size: 16px;
         }
 
@@ -106,16 +106,18 @@
 {% endblock %}
 
 {% block content %}
-    <a href="/register">Register</a>
-    {% if tasks %}
+    <a href="/create">Create Transaction</a>
+    {% if transactions %}
         <div class="task-container">
-            {% for task in tasks %}
+            {% for transaction in transactions %}
                 <div class="task-block">
-                    <a href="/task/{{ task.id }}">
+                    <h1>Aboba</h1>
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="card-title">{{ task.author }}</h2>
-                                <h3 class="card-text">{{ task.content }}</h3>
+                                <h2 class="card-title">{{ transaction.owner }}</h2>
+                                <h3 class="card-text">{{ transaction.amount, transaction.category}}</h3>
+                                <h4 class="card-text">{{ transaction.description }}</h4>
+                                <h3 class="card-text">{{ transaction.date}}</h3>
                             </div>
                         </div>
                     </a>
